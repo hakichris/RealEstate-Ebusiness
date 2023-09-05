@@ -1,15 +1,45 @@
 import React from 'react';
-import '../CSS/home.css';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-export const Home = () => {
+const ImageSlider: React.FC = () => {
+  const settings: SliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000, // Set the time between slides (in milliseconds)
+  };
 
+  return (
+    <div>
+      <Slider {...settings}>
+        <div>
+          <img src="image1.jpg" alt="Image 1" />
+        </div>
+        <div>
+          <img src="image2.jpg" alt="Image 2" />
+        </div>
+        <div>
+          <img src="image3.jpg" alt="Image 3" />
+        </div>
+        {/* Add more slides as needed */}
+      </Slider>
+    </div>
+  );
+};
 
-return (
+export default ImageSlider;
 
-<div className="home-container">
-    <h1> I am home here </h1> 
-</div>
-
-)
-
+interface SliderSettings {
+  dots: boolean;
+  infinite: boolean;
+  speed: number;
+  slidesToShow: number;
+  slidesToScroll: number;
+  autoplay: boolean;
+  autoplaySpeed: number;
 }
