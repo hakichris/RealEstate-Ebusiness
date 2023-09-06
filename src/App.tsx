@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SharedLayout from './pages/sharedlayout';
-import { Home } from './components/home';
+import  Home  from './components/home';
 import './App.css';
 
 function App() {
@@ -9,9 +9,6 @@ function App() {
   <Routes>
     <Route path='/' element={< SharedLayout/>}>
        <Route index element={< Home />} />                   
-
-
-
     </Route>
   </Routes>
   </BrowserRouter>

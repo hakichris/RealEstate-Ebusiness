@@ -1,9 +1,16 @@
 import React from 'react';
 import Slider from 'react-slick';
+import '../css/home.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import image5 from './assets/image5.jpeg';
+import image6 from './assets/image6.jpeg';
+import image7 from './assets/image7.jpeg';
+import image8 from './assets/image8.jpeg';
 
-const ImageSlider: React.FC = () => {
+
+
+const Home: React.FC = () => {
   const settings: SliderSettings = {
     dots: true,
     infinite: true,
@@ -17,14 +24,17 @@ const ImageSlider: React.FC = () => {
   return (
     <div>
       <Slider {...settings}>
-        <div>
-          <img src="image1.jpg" alt="Image 1" />
+      <div>
+          <img src={image5} alt="Image 1" className="slider-image" />
         </div>
         <div>
-          <img src="image2.jpg" alt="Image 2" />
+          <img src={image6} alt="Image 2" className="slider-image"  />
         </div>
         <div>
-          <img src="image3.jpg" alt="Image 3" />
+          <img src={image7} alt="Image 3" className="slider-image" />
+        </div>
+        <div>
+          <img src={image8} alt="Image 4" className="slider-image"  />
         </div>
         {/* Add more slides as needed */}
       </Slider>
@@ -32,7 +42,7 @@ const ImageSlider: React.FC = () => {
   );
 };
 
-export default ImageSlider;
+export default Home;
 
 interface SliderSettings {
   dots: boolean;
