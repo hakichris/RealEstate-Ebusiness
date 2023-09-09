@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SharedLayout from './pages/sharedlayout';
 import  Home  from './components/home';
 import './App.css';
+import './css/home.css'
 
 function App() {
   return (
