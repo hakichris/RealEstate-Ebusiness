@@ -1,6 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import '../css/home.css'
+
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
@@ -18,14 +18,16 @@ import image3 from './assets/image3.jpeg';
 import image4 from './assets/image4.jpeg';
 import image5 from './assets/image5.jpeg';
 import image6 from './assets/image6.jpeg';
+import image7 from './assets/image7.jpeg';
+import image8 from './assets/image8.jpeg';
 
 
 const Home: React.FC = () => {
   return (
-    <div className="container">
-      <h1 className="heading">Flower Gallery</h1>
+    <div className="slide-container">
+      <h1 className="heading-title1">House Galerie</h1>
       <Swiper
-        modules={[EffectCoverflow, Pagination, Navigation]}
+       modules={[EffectCoverflow, Pagination, Navigation]}
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
@@ -41,7 +43,6 @@ const Home: React.FC = () => {
         navigation={{
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
-          
         }}
         className="swiper_container"
       >
@@ -63,16 +64,23 @@ const Home: React.FC = () => {
         <SwiperSlide>
           <img src={image6} alt="slide1" />
         </SwiperSlide>
-
+        <SwiperSlide>
+          <img src={image7} alt="slide1" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={image8} alt="slide1" />
+        </SwiperSlide>
+        
         <div className="slider-controler">
           <div className="swiper-button-prev slider-arrow">
-            <FontAwesomeIcon icon={faArrowLeft} />
+            <FontAwesomeIcon name="arrow-back-outline" icon={faArrowLeft} />
           </div>
           <div className="swiper-button-next slider-arrow">
-            <FontAwesomeIcon icon={faArrowRight} />
+            <FontAwesomeIcon name="arrow-forward-outline" icon={faArrowRight} />
           </div>
           <div className="swiper-pagination"></div>
         </div>
+       
       </Swiper>
     </div>
   );
